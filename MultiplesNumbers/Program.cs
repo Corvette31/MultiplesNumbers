@@ -16,7 +16,6 @@ namespace MultiplesNumbers
 
             randomNumber = random.Next(initialRangeValue, finiteRangeValue);
 
-
             for (int i = randomNumber; i <= finiteNaturalNumber; i += randomNumber)
             {
                 if (i >= initialNaturalNumber)
