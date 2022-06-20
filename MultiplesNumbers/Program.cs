@@ -6,26 +6,26 @@ namespace MultiplesNumbers
     {
         static void Main(string[] args)
         {
+            Random random = new Random();
             int initialRangeValue = 1;
-            int finiteRangeValue = 27;
+            int finiteRangeValue = 28;
             int initialNaturalNumber = 100;
             int finiteNaturalNumber = 999;
-            int MultiplesNumbers;
+            int randomNumber;
+            int divisible = 0;
 
-            for (int i = initialRangeValue; i <= finiteRangeValue; i++)
+            randomNumber = random.Next(initialRangeValue, finiteRangeValue);
+
+
+            for (int i = randomNumber; i <= finiteNaturalNumber; i += randomNumber)
             {
-                MultiplesNumbers = 0;
-
-                for (int j = i; j <= finiteNaturalNumber; j += i)
+                if (i >= initialNaturalNumber)
                 {
-                    if (j >= initialNaturalNumber)
-                    {
-                        MultiplesNumbers++;
-                    }
+                    divisible++;
                 }
-
-                Console.WriteLine($"N = {i} Кратных чисел: {MultiplesNumbers}");
             }
+
+            Console.WriteLine($"Количество чисел в диапозоне от : {initialNaturalNumber} до : {finiteNaturalNumber} на которое делится N {randomNumber} состовляет {divisible}");
         }
     }
 }
