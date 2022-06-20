@@ -12,7 +12,7 @@ namespace MultiplesNumbers
             int initialNaturalNumber = 100;
             int finiteNaturalNumber = 999;
             int randomNumber;
-            int divisible = 0;
+            int divisibleCount = 0;
 
             randomNumber = random.Next(initialRangeValue, finiteRangeValue);
 
@@ -20,11 +20,11 @@ namespace MultiplesNumbers
             {
                 if (i >= initialNaturalNumber)
                 {
-                    divisible++;
+                    divisibleCount++;
                 }
             }
 
-            Console.WriteLine($"Количество чисел в диапозоне от : {initialNaturalNumber} до : {finiteNaturalNumber} на которое делится N {randomNumber} состовляет {divisible}");
+            Console.WriteLine($"Количество чисел в диапозоне от : {initialNaturalNumber} до : {finiteNaturalNumber} на которое делится N {randomNumber} состовляет {divisibleCount}");
         }
     }
 }
